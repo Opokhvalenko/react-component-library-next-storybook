@@ -27,29 +27,29 @@ Storybook:
 
 ```text
 src/
-app/
- layout.tsx
- page.tsx
- components/
-Input/
- Input.tsx
- Input.css
-Toast/
- Toast.tsx
- Toast.css
- useAutoDismiss.ts
-SidebarMenu/
- SidebarMenu.tsx
- SidebarMenuList.tsx
- SidebarMenu.types.ts
- SidebarMenu.css
- useSidebarOpenItems.ts
-stories/
- Input.stories.tsx
- InputRHF.stories.tsx
- Toast.stories.tsx
- SidebarMenu.stories.tsx
-index.ts
+  app/
+    layout.tsx
+    page.tsx
+  components/
+    Input/
+      Input.tsx
+      Input.css
+    Toast/
+      Toast.tsx
+      Toast.css
+      useAutoDismiss.ts
+    SidebarMenu/
+      SidebarMenu.tsx
+      SidebarMenuList.tsx
+      SidebarMenu.types.ts
+      SidebarMenu.css
+      useSidebarOpenItems.ts
+  stories/
+    Input.stories.tsx
+    InputRHF.stories.tsx
+    Toast.stories.tsx
+    SidebarMenu.stories.tsx
+  index.ts
 ```
 
 ---
@@ -166,6 +166,7 @@ The project was built step-by-step using feature branches:
 - `feat/toast-component` – added Toast notification component + stories + `useAutoDismiss` hook
 - `feat/sidebar-menu-component` – added sliding Sidebar menu with nested items + stories
 - `docs/readme-and-screenshots` – added documentation and Storybook screenshots
+- `feat/polish-prettier-index` – added Prettier, barrel index.ts and Storybook refinements
   This mimics a real-world workflow where each feature is implemented and reviewed in an isolated
   branch.
 
