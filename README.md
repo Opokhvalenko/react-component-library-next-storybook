@@ -135,6 +135,32 @@ The project was built step-by-step using feature branches:
 This mimics a real-world workflow where each feature is implemented and reviewed in an isolated
 branch.
 ---
+## Quality checks
+
+This project has a small but solid quality gate, aggregated under the `check` script:
+
+- `npm run lint` – ESLint (Next.js + TypeScript + Storybook rules) for `src` and `.storybook`.
+- `npm run typecheck` – TypeScript check (`tsc --noEmit`) to ensure type safety.
+- `npm run test` – Vitest tests running against the Storybook stories (storybook test runner).
+- `npm run build` – Next.js production build with the App Router.
+- `npm run build-storybook` – builds the Storybook instance to `storybook-static`.
+
+You can run all of them in one go:
+
+```bash
+npm run check
+```
+Before pushing a branch I usually run:
+
+- `npm run lint`
+- `npm run typecheck`
+- `npm run test`
+- `npm run build`
+- `npm run build-storybook`
+- `npm run check`
+
+to make sure linting, type safety, tests and builds all pass.
+---
 ## Screenshots
 Screenshots are stored in the `screenshots/` folder and demonstrate the requested states from the
 assignment.
