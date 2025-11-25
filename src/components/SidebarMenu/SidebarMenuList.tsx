@@ -6,7 +6,11 @@ interface SidebarMenuListProps {
   onToggle: (id: string) => void;
 }
 
-export function SidebarMenuList({ items, openItemIds, onToggle }: SidebarMenuListProps) {
+export function SidebarMenuList({
+  items,
+  openItemIds,
+  onToggle,
+}: SidebarMenuListProps) {
   return (
     <ul className="sidebar-list">
       {items.map((item) => {
@@ -23,7 +27,11 @@ export function SidebarMenuList({ items, openItemIds, onToggle }: SidebarMenuLis
 
         return (
           <li key={item.id} className="sidebar-item">
-            <button type="button" className="sidebar-item-button" onClick={handleClick}>
+            <button
+              type="button"
+              className="sidebar-item-button"
+              onClick={handleClick}
+            >
               <span className="sidebar-item-label">{item.label}</span>
 
               {hasChildren && (

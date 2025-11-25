@@ -21,7 +21,12 @@ export default function SidebarMenu({
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="sidebar-overlay" aria-modal="true" role="dialog" aria-label={title}>
+        <div
+          className="sidebar-overlay"
+          aria-modal="true"
+          role="dialog"
+          aria-label={title}
+        >
           <button
             type="button"
             className="sidebar-backdrop"
@@ -50,7 +55,11 @@ export default function SidebarMenu({
             </div>
 
             <nav className="sidebar-nav" aria-label={title}>
-              <SidebarMenuList items={items} openItemIds={openItemIds} onToggle={toggleItem} />
+              <SidebarMenuList
+                items={items}
+                openItemIds={openItemIds}
+                onToggle={toggleItem}
+              />
             </nav>
           </motion.aside>
         </div>

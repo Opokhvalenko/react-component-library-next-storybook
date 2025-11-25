@@ -28,7 +28,10 @@ interface PasswordToggleButtonProps {
   onToggle: () => void;
 }
 
-function PasswordToggleButton({ isVisible, onToggle }: PasswordToggleButtonProps) {
+function PasswordToggleButton({
+  isVisible,
+  onToggle,
+}: PasswordToggleButtonProps) {
   return (
     <button
       type="button"

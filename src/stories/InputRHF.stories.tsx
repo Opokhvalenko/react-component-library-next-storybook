@@ -21,9 +21,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 function StoryContainer({ children }: { children: ReactNode }) {
-  return (
-    <div style={{ maxWidth: 360, width: "100%" }}>{children}</div>
-  );
+  return <div style={{ maxWidth: 360, width: "100%" }}>{children}</div>;
 }
 
 function BasicRHFExample() {
@@ -31,11 +29,11 @@ function BasicRHFExample() {
     defaultValues: { email: "" },
   });
 
- const onSubmit = (data: FormValues) => {
-  // In Storybook we don't actually submit anywhere,
-  // we just use the value to satisfy lint rules.
-  void data;
-};
+  const onSubmit = (data: FormValues) => {
+    // In Storybook we don't actually submit anywhere,
+    // we just use the value to satisfy lint rules.
+    void data;
+  };
 
   return (
     <StoryContainer>
