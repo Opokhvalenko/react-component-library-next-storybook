@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 
-export function useAutoDismiss(duration: number | undefined, onDismiss: () => void) {
+export function useAutoDismiss(
+  duration: number | undefined,
+  onDismiss: () => void,
+) {
   useEffect(() => {
     if (!duration) return;
 

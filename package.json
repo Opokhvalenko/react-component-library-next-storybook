@@ -11,6 +11,8 @@
     "build-storybook": "storybook build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "lint:fix": "eslint src .storybook --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
     "check": "npm run lint && npm run typecheck && npm run test && npm run build && npm run build-storybook"
   },
   "dependencies": {
@@ -38,6 +40,7 @@
     "playwright": "^1.56.1",
     "storybook": "^10.0.8",
     "typescript": "^5",
-    "vitest": "^4.0.13"
+    "vitest": "^4.0.13",
+    "prettier": "^3.3.3"
   }
 }

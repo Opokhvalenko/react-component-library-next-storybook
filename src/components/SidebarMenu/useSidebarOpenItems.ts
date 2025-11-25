@@ -5,7 +5,9 @@ export function useSidebarOpenItems(initialOpenIds: string[] = []) {
 
   const toggleItem = useCallback((id: string) => {
     setOpenItemIds((prev) =>
-      prev.includes(id) ? prev.filter((openId) => openId !== id) : [...prev, id],
+      prev.includes(id)
+        ? prev.filter((openId) => openId !== id)
+        : [...prev, id],
     );
   }, []);
 

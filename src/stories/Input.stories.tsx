@@ -74,6 +74,16 @@ export const Number: Story = {
   render: (args) => <StatefulInput {...args} />,
 };
 
+export const TextNotClearable: Story = {
+  args: {
+    label: "Text (no clear button)",
+    type: "text",
+    clearable: false,
+    placeholder: "Regular text input",
+  },
+  render: (args) => <StatefulInput {...args} />,
+};
+
 export const WithError: Story = {
   args: {
     label: "Email",
